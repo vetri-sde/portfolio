@@ -3,7 +3,7 @@ import ResumeButton from './ResumeButton';
 import Skills from './Skills';
 import Certifications from './Certifications';
 import CareerTimeline from './CareerTimeline'; // Import CareerTimeline
-import profileImg from "../public/resources/profile.jpg";
+import profileImg from "./resources/profile.jpg";
 
 
 // Simulate fetching LinkedIn details (mocked data)
@@ -335,7 +335,7 @@ export default function CertificationShowcase() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-[#0B0F17] min-h-screen text-gray-900 dark:text-gray-100">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#0B0F17] text-gray-900 dark:text-gray-100">
       <header className="max-w-6xl mx-auto px-6 py-12 border-gray-300 dark:border-gray-700 border-b">
         {/* Stack vertically on mobile (text then image), show as row on md+ with image on the right */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
