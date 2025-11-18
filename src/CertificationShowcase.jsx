@@ -405,7 +405,7 @@ export default function CertificationShowcase() {
       </section>
 
       <footer className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between text-sm text-gray-400">
-        <div>x``
+        <div>
           <a href="#">
             Home
           </a>
