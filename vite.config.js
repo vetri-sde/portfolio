@@ -7,5 +7,5 @@ export default defineConfig({
     open: true,
     port: 3001
   },
-  base: '/vetrivelsde/'
+  base: '/portfolio/'
 });
