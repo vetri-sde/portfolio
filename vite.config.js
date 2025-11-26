@@ -7,5 +7,17 @@ export default defineConfig({
     open: true,
     port: 3001
   },
-  base: '/portfolio/'
+  base: '/portfolio/',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'heroicons': ['@heroicons/react/24/solid']
+        }
+      }
+    },
+    commonjsOptions: {
+      include: [/node_modules/]
+    }
+  }
 });
