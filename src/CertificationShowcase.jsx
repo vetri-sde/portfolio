@@ -411,8 +411,8 @@ export default function CertificationShowcase() {
           </a>
         </div>
         <div className="flex gap-4 items-center">
-          <a href={userInfo.profile.linkedInUrl}>LinkedIn</a>
-          <a href={userInfo.profile.githubUrl}>GitHub</a>
+          <a href={userInfo.profile.linkedInUrl} target="_blank">LinkedIn</a>
+          <a href={userInfo.profile.githubUrl} target="_blank">GitHub</a>
         </div>
       </footer>
     </div>
