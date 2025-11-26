@@ -14,7 +14,6 @@ This portfolio website is designed to present a professional profile with an emp
 - **Skills Showcase** - Comprehensive display of technical competencies across multiple domains
 - **Career Timeline** - Interactive timeline visualizing career progression and experience
 - **Certifications Gallery** - Detailed certification showcase with links to verified credentials
-- **Projects Portfolio** - Project grid highlighting key work with descriptions and visual elements
 - **Responsive Design** - Fully responsive layout that works seamlessly across all devices
 - **Dark Mode Support** - Built-in dark mode for comfortable viewing in any lighting condition
 - **Resume Integration** - Quick access to downloadable resume
@@ -96,7 +95,7 @@ Start the development server with hot module replacement:
 npm run dev
 ```
 
-The application will open at `http://localhost:3001` with automatic browser refresh on code changes.
+The application will open at `http://localhost:3001/portfolio` with automatic browser refresh on code changes.
 
 ### Build
 
@@ -240,7 +239,7 @@ The portfolio showcases:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE] file for details.
 
 ## 👤 Contact
 
