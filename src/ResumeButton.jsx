@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function ResumeButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const resumeFile = './src/resources/resume.pdf';
+  const resumeFile = './resources/resume.pdf';
 
   return (
     <>
