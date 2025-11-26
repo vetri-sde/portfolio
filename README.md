@@ -46,26 +46,28 @@ This portfolio website is designed to present a professional profile with an emp
 ```
 vetrivelsde/
 ├── src/
-│   ├── components/
-│   │   ├── CertificationShowcase.jsx  - Main portfolio component
-│   │   ├── CareerTimeline.jsx         - Career experience timeline
-│   │   ├── Certifications.jsx         - Certifications display
-│   │   ├── ProjectsGrid.jsx           - Projects showcase
-│   │   ├── Skills.jsx                 - Technical skills section
-│   │   ├── ResumeButton.jsx           - Resume download button
-│   │   ├── ResumeViewer.jsx           - PDF resume viewer
-│   │   ├── ImageComponent.jsx         - Image handling utilities
-│   │   └── LinkedInCallback.jsx       - LinkedIn OAuth callback
-│   ├── resources/                     - Images and static assets
-│   ├── App.jsx                        - Main application component
-│   ├── main.jsx                       - Application entry point
-│   ├── style.css                      - Global styles
-│   └── postcss.config.js              - PostCSS configuration
-├── public/                            - Public static assets
-├── vite.config.js                     - Vite build configuration
-├── tailwind.config.js                 - Tailwind CSS configuration
-├── package.json                       - Project dependencies and scripts
-└── README.md                          - Project documentation
+│   ├── data/
+│   │   └── resumeData.js              - Base64 encoded resume data
+│   ├── CertificationShowcase.jsx       - Main portfolio component
+│   ├── CareerTimeline.jsx              - Career experience timeline
+│   ├── Certifications.jsx              - Certifications display
+│   ├── ProjectsGrid.jsx                - Projects showcase
+│   ├── Skills.jsx                      - Technical skills section
+│   ├── ResumeButton.jsx                - Resume viewer & download
+│   ├── ResumeViewer.jsx                - PDF resume viewer
+│   ├── ImageComponent.jsx              - Image handling utilities
+│   ├── LinkedInCallback.jsx            - LinkedIn OAuth callback
+│   ├── App.jsx                         - Main application component
+│   ├── main.jsx                        - Application entry point
+│   ├── style.css                       - Global styles
+│   ├── postcss.config.js               - PostCSS configuration
+│   ├── resources/                      - Images and static assets
+│   └── tailwind.config.js              - Tailwind CSS configuration
+├── public/                             - Public static assets
+├── vite.config.js                      - Vite build configuration
+├── tailwind.config.js                  - Tailwind CSS configuration
+├── package.json                        - Project dependencies and scripts
+└── README.md                           - Project documentation
 ```
 
 ## 🚀 Getting Started
@@ -176,7 +178,37 @@ Grid layout showcasing notable projects with descriptions and visual indicators 
 Gallery view of professional certifications with links to verification URLs and metadata.
 
 ### ResumeButton
-Integration for resume download or viewing capabilities.
+Integration for resume download or viewing capabilities. The resume is stored as Base64 encoded data in `src/data/resumeData.js` for seamless viewing and downloading without external file dependencies.
+
+## 📄 Resume Management
+
+The portfolio uses a **Base64 encoded resume system** for reliable resume display and download:
+
+### How It Works
+- Resume PDF is encoded to Base64 and stored in `src/data/resumeData.js`
+- No external file paths or 404 errors
+- Works offline and across all browsers
+- Professional modal interface for viewing
+
+### Updating Your Resume
+
+1. **Encode your resume PDF to Base64:**
+   - Visit: https://www.base64encode.org/
+   - Upload your resume PDF
+   - Copy the entire encoded string
+
+2. **Update the resumeData.js file:**
+   ```javascript
+   // src/data/resumeData.js
+   export const resumeBase64 = "data:application/pdf;base64,YOUR_ENCODED_STRING_HERE";
+   ```
+
+3. **The ResumeButton component** will automatically use the updated resume
+
+### Functions Available
+- `resumeBase64` - Base64 encoded resume data
+- `downloadResume()` - Download resume as PDF file
+- `viewResume()` - View resume in new tab
 
 ## 🔗 Integration Points
 

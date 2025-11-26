@@ -3,6 +3,7 @@ import ResumeButton from './ResumeButton';
 import Skills from './Skills';
 import Certifications from './Certifications';
 import CareerTimeline from './CareerTimeline'; // Import CareerTimeline
+import ProjectsGrid from './ProjectsGrid';
 import profileImg from "./resources/profile.jpg";
 
 
@@ -315,6 +316,36 @@ function fetchProfileDetails() {
         skills: ['Java', 'SQL'],
         type: 'Full-time',
       }
+    ],
+    projects: [
+      {
+        id: "p1",
+        title: "Realtime Log Analyzer",
+        description:
+          " A streaming log analytics engine built with Kafka + Spark to detect anomalies in real time. Processes millions of events per hour, provides dashboards and alerting for SRE teams. A streaming log analytics engine built with Kafka + Spark to detect anomalies in real time. Processes millions of events per hour, provides dashboards and alerting for SRE teams. ",
+        iconName: "sparkles", // maps to SparklesIcon
+      },
+      {
+        id: "p2",
+        title: "Visual Query Builder",
+        description:
+          "Drag-and-drop query composition UI that outputs optimized SQL for complex joins and aggregations. Includes saved templates, validation and preview mode for datasets.",
+        iconName: "code",
+      },
+      {
+        id: "p3",
+        title: "Portfolio Showcase",
+        description:
+          "The portfolio website (this app) — built with React, Vite and Tailwind. Responsive, deployable to GitHub Pages and optimized for developer hiring flows.",
+        iconName: "user", // your uploaded image path used as example
+      },
+      {
+        id: "p4",
+        title: "Small Business Dashboard",
+        description:
+          "A lightweight ERP dashboard for SMBs with KPI widgets, order tracking and role-based access. Built with accessibility and low memory footprint in mind.",
+        iconName: "folder",
+      }
     ]
   };
   return Promise.resolve(response);
@@ -382,6 +413,8 @@ export default function CertificationShowcase() {
       <Skills skills={userInfo.skills} />
 
       <CareerTimeline careerEntries={userInfo.careerEntries} />
+
+      {/* <ProjectsGrid projects={userInfo.projects}/> */}
 
       <Certifications certifications={userInfo.certifications} />
 

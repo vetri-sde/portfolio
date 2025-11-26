@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { resumeBase64, downloadResume } from './data/resumeData';
 
 export default function ResumeButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const resumeFile = './public/resources/resume.pdf'; // Adjust the path as necessary
 
   return (
     <>
@@ -60,7 +60,7 @@ export default function ResumeButton() {
             {/* Resume Viewer */}
             <div className="relative">
               <iframe
-                src={resumeFile}
+                src={resumeBase64}
                 className={`w-full h-[70vh] border-0 transition-opacity duration-500 ${
                   isLoading ? 'opacity-0' : 'opacity-100'
                 }`}
@@ -71,9 +71,11 @@ export default function ResumeButton() {
 
             {/* Footer */}
             <div className="flex justify-end gap-4 px-5 py-4 bg-gray-100 border-t border-gray-200">
-              <a
-                href={resumeFile}
-                download
+              <button
+                onClick={() => {
+                  downloadResume();
+                  setIsOpen(false);
+                }}
                 className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-[#00C4FF] to-[#0066FF] text-white rounded-lg font-medium shadow hover:shadow-lg transform hover:scale-105 transition"
               >
                 <svg
@@ -91,7 +93,7 @@ export default function ResumeButton() {
                   />
                 </svg>
                 Download
-              </a>
+              </button>
               <button
                 onClick={() => setIsOpen(false)}
                 className="px-5 py-2 bg-gray-300 text-black rounded-lg font-medium hover:bg-gray-400 transform hover:scale-105 transition"
