@@ -17,7 +17,7 @@ function fetchProfileDetails() {
       mail: 'vetriveldharuman01@gmail.com',
       headline: 'Associate Application Developer',
       linkedInUrl: 'https://www.linkedin.com/in/vetrivel-dharuman/',
-      githubUrl: 'https://github.com/webdevil80',
+      githubUrl: 'https://github.com/vetri-sde',
       description:
         'Designing and delivering end-to-end Java full-stack solutions that are scalable, secure, and user-centric - transforming complex business requirements into seamless digital experiences.',
     },
@@ -411,8 +411,8 @@ export default function CertificationShowcase() {
           </a>
         </div>
         <div className="flex gap-4 items-center">
-          <a href={userInfo.profile.linkedInUrl}>LinkedIn</a>
-          <a href={userInfo.profile.githubUrl}>GitHub</a>
+          <a href={userInfo.profile.linkedInUrl} target="_blank">LinkedIn</a>
+          <a href={userInfo.profile.githubUrl} target="_blank">GitHub</a>
         </div>
       </footer>
     </div>
